@@ -11,6 +11,7 @@ interface IProps<IForm extends FieldValues> {
   name: Path<IForm>
   label?: string
   required?: boolean
+  placeholder?: string
 }
 
 export default function DatePickerField<IForm extends FieldValues>({
@@ -18,6 +19,7 @@ export default function DatePickerField<IForm extends FieldValues>({
   control,
   label,
   required = false,
+  placeholder,
   className,
   ...props
 }: IProps<IForm> & Partial<ReactDatePickerProps>) {
@@ -46,6 +48,7 @@ export default function DatePickerField<IForm extends FieldValues>({
           clearButtonClassName="!right-[5.6rem]"
           isClearable
           showMonthDropdown
+          placeholderText={placeholder}
           showYearDropdown
           popperPlacement="bottom-end"
           {...field}

@@ -1,5 +1,18 @@
 import { RouteObject } from "react-router-dom"
-import { Layout, Home, Actives, Courses, CoursePlan, CourseDetail, Payment, ProfileLayout } from "@/views"
+import {
+  Layout,
+  Home,
+  Actives,
+  Courses,
+  CoursePlan,
+  CourseDetail,
+  Payment,
+  ProfileLayout,
+  Certification,
+  PaymentHistory,
+  ProfileInfo,
+} from "@/views"
+import Experiences from "@/views/profile/experience"
 
 export default function privateRoutes(): RouteObject[] {
   return [
@@ -17,10 +30,10 @@ export default function privateRoutes(): RouteObject[] {
           path: "profile",
           element: <ProfileLayout />,
           children: [
-            { path: "info", element: "info" },
-            { path: "experiences", element: "experiences" },
-            { path: "sertifications", element: "sertifications" },
-            { path: "payment_history", element: "payment_history" },
+            { path: "info", element: <ProfileInfo /> },
+            { path: "experiences", element: <Experiences /> },
+            { path: "certifications", element: <Certification /> },
+            { path: "payment_history", element: <PaymentHistory /> },
             { path: "devices", element: "devices" },
           ],
         },

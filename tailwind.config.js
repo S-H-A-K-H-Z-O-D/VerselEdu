@@ -25,6 +25,7 @@ module.exports = {
         deepBlue: "hsl(var(--deep-blue))",
         black: "hsl(var(--black))",
         red: "hsl(var(--red))",
+        redLight: "hsl(var(--red-light))",
         borderGrey: "hsl(var(--border-grey))",
         darkBlue: "hsl(var(--dark-blue))",
         bgGreyLight: "hsl(var(--bg-grey-light))",
@@ -35,6 +36,8 @@ module.exports = {
         opacityWhite: "hsla(var(--opacity-white))",
         opacityDark70: "hsla(var(--opacity-dark70))",
         greyTxt: "hsl(var(--grey-txt))",
+        deepGreen: "hsl(var(--deep-green))",
+        greenLight: "hsl(var(--green-light))",
         //  SHADCN
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

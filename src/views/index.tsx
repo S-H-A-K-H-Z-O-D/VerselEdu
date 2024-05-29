@@ -12,6 +12,9 @@ import CoursePlan from "@/views/inner-pages/course-plan"
 import CourseDetail from "@/views/inner-pages/course-detail"
 import Payment from "@/views/payment/index.tsx"
 import ProfileLayout from "@/views/profile/layout"
+import Certification from "@/views/profile/certification"
+import PaymentHistory from "@/views/profile/payment-history"
+import ProfileInfo from "@/views/profile/info"
 
 export {
   AuthLayout,
@@ -27,4 +30,7 @@ export {
   CourseDetail,
   ProfileLayout,
   Payment,
+  Certification,
+  PaymentHistory,
+  ProfileInfo,
 }

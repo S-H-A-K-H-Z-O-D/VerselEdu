@@ -16,7 +16,7 @@ const menu = [
   {
     label: "Sertifikatlarim",
     icon: <DiplomaIcon />,
-    path: "sertifications",
+    path: "certifications",
   },
   {
     label: "To'lov tarixi",

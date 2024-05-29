@@ -46,7 +46,7 @@ const Courses = ({ setIsClicked }: CoursesModalProps) => {
         </div>
 
         <div className="w-[75%] bg-white rounded-3xl mr-10">
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-10 max-2xl:grid-cols-2">
             {ModalCourses_data.map((item, index) => (
               <div key={index}>
                 <Card img={img} title={item.title} video={item.video} test={item.test} />

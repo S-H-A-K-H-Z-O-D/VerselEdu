@@ -12,7 +12,7 @@ const Card = ({ img, title, video, test }: ProgressCardProps) => {
         <div className="flex flex-col gap-2 p-4 justify-between">
           <div className="max-w-[270px]">
             <p className="text-[1.5rem] font-medium">{title}</p>
-            <div className="flex items-center gap-8 mt-2">
+            <div className="flex items-center gap-x-5 mt-2 flex-wrap">
               <div className="flex items-center gap-2">
                 <VideoIcon isBlue={true} />
                 <p className="text-[1.3rem]">

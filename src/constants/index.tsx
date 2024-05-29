@@ -246,3 +246,89 @@ export const paymentTypes_data = [
   { id: 3, title: "Kursni elektron to’lov orqali amalga oshiring", img: uzumclickpayme },
   { id: 4, title: "Kursni bo’lib to’lash imkoniyati", img: null },
 ]
+
+export const payment_history = [
+  {
+    name: "Kiberxavfsizlik: Pentesting",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Uzkard",
+    status: "To'langan",
+  },
+  { name: "English for IT", date: "08.03.2024", price: "1 200 000 so'm", payment_type: "Payme", status: "To'langan" },
+  {
+    name: "Data Science va Sun'iy Intellekt",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Visa",
+    status: "To'langan",
+  },
+  {
+    name: "Sunʼiy intellekt - NLP (nutq bilan ishlash)",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Click",
+    status: "To'langan",
+  },
+  {
+    name: "No-Code: Kod yozmasdan sayt tuzish",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Humo",
+    status: "To'langan",
+  },
+  {
+    name: "QA - тестировщик",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "MasterCard",
+    status: "To'langan",
+  },
+  {
+    name: "Project Management",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Payme",
+    status: "To'langan",
+  },
+  {
+    name: "Android & Kotlin dasturlash",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Visa",
+    status: "To'langan",
+  },
+  {
+    name: "PHP & Yii dasturlash",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Uzum bank",
+    status: "To'langan",
+  },
+  {
+    name: "PHP & Yii dasturlash",
+    date: "08.03.2024",
+    price: "1 200 000 so'm",
+    payment_type: "Payme",
+    status: "To'langan",
+  },
+]
+
+export const regions = [
+  { value: 1, label: "Toshkent" },
+  { value: 2, label: "Xorazm" },
+  { value: 3, label: "Buxoro" },
+  { value: 4, label: "Samarqand" },
+]
+
+export const countries = [
+  { value: 1, label: "O'zbekiston" },
+  { value: 2, label: "Qazaqiston" },
+  { value: 3, label: "Tozikiston" },
+  { value: 4, label: "Rossiya" },
+]
+
+export const sexOptions = [
+  { value: 1, label: "Erkak" },
+  { value: 2, label: "Ayol" },
+]

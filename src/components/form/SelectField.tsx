@@ -71,7 +71,7 @@ export default function SelectField<IForm extends FieldValues>({
 const classNames: ClassNamesConfig = {
   control: ({ isFocused }) =>
     cn(
-      "h-[5.6rem] !rounded-[1.2rem] px-[1.6rem] !border-borderGrey !shadow-sm",
+      "!rounded-[1.2rem] px-[1.6rem] !border-borderGrey !shadow-sm h-[clamp(4.8rem,_4.8vw,_5.6rem)] text-[clamp(1.4rem,_1.4vw,_1.6rem)]",
       isFocused ? "!border-borderGrey !border-2" : "",
     ),
   indicatorSeparator: () => "!hidden",

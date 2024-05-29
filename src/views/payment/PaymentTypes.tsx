@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import SelectField from "@/components/form/SelectField.tsx"
 import PhoneInputField from "@/components/form/PhoneInputField.tsx"
+import PaymentModal from "@/views/payment/PaymentModal.tsx"
 
 interface IForm {
   card_number: string
@@ -24,9 +25,11 @@ const PaymentTypes = () => {
   const methods = useForm<IForm>()
   const { handleSubmit, control } = methods
   const [type, setType] = useState(0)
+  const [isPaid, setIsPaid] = useState(false)
 
   const onSubmit = (values: IForm) => {
     console.log(values)
+    setIsPaid(true)
   }
 
   return (
@@ -85,6 +88,9 @@ const PaymentTypes = () => {
         <Button className="w-full mt-16" type="submit">
           To'lov qilish
         </Button>
+
+        <PaymentModal isPaid={isPaid} setIsPaid={setIsPaid} />
+
         <p className="text-greyTxt mt-7">
           Tugmani bosish orqali siz foydalanish shartlariga{" "}
           <Link to="#" className="text-deepBlue">

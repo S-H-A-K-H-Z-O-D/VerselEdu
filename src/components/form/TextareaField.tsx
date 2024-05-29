@@ -37,7 +37,7 @@ export default function TextareaField<IForm extends FieldValues>({
     <fieldset className={cn("flex flex-col gap-[0.8rem]", className)}>
       {label && <FieldLabel required={required}>{label}</FieldLabel>}
       <textarea
-        className="h-[18rem] border-borderGrey border rounded-[1.2rem] bg-white outline-borderGrey leading-none px-[2.4rem] py-[1.6rem] text-darkBlue caret-darkBlue font-medium"
+        className="h-[18rem] border-borderGrey border rounded-[1.2rem] bg-white outline-borderGrey leading-none px-[2.4rem] py-[1.6rem] text-darkBlue caret-darkBlue font-medium text-[clamp(1.4rem,_1.4vw,_1.6rem)]"
         {...reg}
         {...props}
       />
