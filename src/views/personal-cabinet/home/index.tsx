@@ -4,7 +4,7 @@ import NewCourses from "@/views/personal-cabinet/home/NewCourses.tsx"
 
 const Home = () => {
   return (
-    <div className="mb-24">
+    <div className="min-[520px]:mb-24">
       <Header />
       <FamousCourses />
       <NewCourses />

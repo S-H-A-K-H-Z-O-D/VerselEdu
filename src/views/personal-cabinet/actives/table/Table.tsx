@@ -29,7 +29,7 @@ const Table = () => {
   )
 
   return (
-    <div className="mt-10 mb-40">
+    <div className="mt-10 min-[520px]:mb-24">
       <div className="bg-white rounded-3xl p-10 max-[450px]:p-5">
         <div className="flex justify-between mb-5 max-lg:flex-col gap-7">
           <div>

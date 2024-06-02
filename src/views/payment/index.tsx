@@ -18,7 +18,7 @@ const Payment = () => {
   }
 
   return (
-    <section className="flex gap-10 mb-24 max-lg:flex-col">
+    <section className="flex gap-10 min-[520px]:mb-24 max-lg:flex-col">
       <div className="w-[20%]">
         <BackBtn />
       </div>

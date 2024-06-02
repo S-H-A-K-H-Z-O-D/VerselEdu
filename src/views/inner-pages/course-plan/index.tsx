@@ -10,7 +10,7 @@ const CoursePlan = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="flex gap-10 max-[900px]:flex-col mb-24">
+    <div className="flex gap-10 max-[900px]:flex-col min-[520px]:mb-24">
       <div className="w-[20%] min-w-[250px] max-[900px]:w-full">
         <Button className="bg-white hover:bg-whitePurple text-black mb-10" onClick={() => navigate(-1)}>
           <ArrowLeftIcon />

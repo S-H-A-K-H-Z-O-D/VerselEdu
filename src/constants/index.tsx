@@ -19,14 +19,22 @@ import banner1 from "@/assets/images/innre-pages/image 68.png"
 import banner2 from "@/assets/images/innre-pages/image 69.png"
 // Comments
 import user from "@/assets/images/innre-pages/user.png"
+import user2 from "@/assets/images/innre-pages/user2.png"
 import admin from "@/assets/images/innre-pages/admin.png"
 import user3 from "@/assets/images/innre-pages/user3.png"
 import user4 from "@/assets/images/innre-pages/user4.png"
 import user5 from "@/assets/images/innre-pages/user5.png"
-// payment
-import uzkardhumo from "@/assets/images/payment/UzcardHumo.png"
-import mastervisa from "@/assets/images/payment/MasterVisaCard.png"
-import uzumclickpayme from "@/assets/images/payment/UzumClickPayme.png"
+
+// Payment
+import { ReactComponent as Uzkart } from "@/assets/images/payment/uzkart.svg"
+import { ReactComponent as Xumo } from "@/assets/images/payment/xumo.svg"
+import { ReactComponent as MasterCard } from "@/assets/images/payment/master-card.svg"
+import { ReactComponent as Visa } from "@/assets/images/payment/visa.svg"
+import { ReactComponent as Payme } from "@/assets/images/payment/payme.svg"
+import { ReactComponent as Click } from "@/assets/images/payment/click.svg"
+import { ReactComponent as Uzumbank } from "@/assets/images/payment/uzumbank.svg"
+import { PaymentType } from "@/types"
+
 export const FamousCourses_data = [
   {
     img: card1,
@@ -240,11 +248,54 @@ export const comment_data = [
   },
 ]
 
-export const paymentTypes_data = [
-  { id: 1, title: "O’zimizning plastik kartalar orqali to’lov qilish", img: uzkardhumo },
-  { id: 2, title: "Chet plastik kartalar orqali to’lov qilish", img: mastervisa },
-  { id: 3, title: "Kursni elektron to’lov orqali amalga oshiring", img: uzumclickpayme },
-  { id: 4, title: "Kursni bo’lib to’lash imkoniyati", img: null },
+export const paymentTypes_data: PaymentType[] = [
+  {
+    id: 1,
+    title: "O’zimizning plastik kartalar orqali to’lov qilish",
+    img: [
+      {
+        label: "uzkart",
+        Component: Uzkart,
+      },
+      {
+        label: "xumo",
+        Component: Xumo,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Chet plastik kartalar orqali to’lov qilish",
+    img: [
+      {
+        label: "master-card",
+        Component: MasterCard,
+      },
+      {
+        label: "visa",
+        Component: Visa,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Kursni elektron to’lov orqali amalga oshiring",
+    img: [
+      {
+        label: "payme",
+        Component: Payme,
+      },
+      {
+        label: "click",
+        Component: Click,
+      },
+      {
+        label: "uzumbank",
+        Component: Uzumbank,
+      },
+    ],
+  },
+  { id: 4, title: "Kursni bo’lib to’lash imkoniyati" },
 ]
 
 export const payment_history = [
@@ -314,6 +365,12 @@ export const payment_history = [
   },
 ]
 
+export const devices_history = [
+  { id: "1", name: "Windows 11, Chrome 108.0.0", device_type: "compyuter", data: new Date() },
+  { id: "2", name: "Redmi 11 Pro, 2201116GT", device_type: "phone", data: new Date() },
+  { id: "3", name: "Linux, Chrome", device_type: "compyuter", data: new Date() },
+]
+
 export const regions = [
   { value: 1, label: "Toshkent" },
   { value: 2, label: "Xorazm" },
@@ -331,4 +388,108 @@ export const countries = [
 export const sexOptions = [
   { value: 1, label: "Erkak" },
   { value: 2, label: "Ayol" },
+]
+
+export const users_data = [
+  {
+    id: 0,
+    img: user2,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment:
+      "Assalomu alaykum. Oldindan iltimos:m aynan cybersecurity yoki linux " +
+      "administration bo'yicha ko'proq darslar tayyorlasangiz. Bu savol emas," +
+      " iltimos tariqasida",
+  },
+  {
+    id: 1,
+    img: user3,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment:
+      "Assalomu alaykum. Oldindan iltimos:m aynan cybersecurity yoki linux " +
+      "administration bo'yicha ko'proq darslar tayyorlasangiz. Bu savol emas," +
+      " iltimos tariqasida",
+  },
+  {
+    id: 2,
+    img: user,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment: "Ha siz orqali xudo xohlasa!",
+  },
+  {
+    id: 3,
+    img: user4,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: true,
+    comment: "Nima uchun mening videoim qotib qoldi?",
+  },
+  {
+    id: 4,
+    img: user5,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: true,
+    comment: "Qanday qilib reaktda use effecgt hook holatiga tushadi ?",
+  },
+  {
+    id: 5,
+    img: user2,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment:
+      "Assalomu alaykum. Oldindan iltimos:m aynan cybersecurity yoki linux " +
+      "administration bo'yicha ko'proq darslar tayyorlasangiz. Bu savol emas," +
+      " iltimos tariqasida",
+  },
+  {
+    id: 6,
+    img: user3,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment:
+      "Assalomu alaykum. Oldindan iltimos:m aynan cybersecurity yoki linux " +
+      "administration bo'yicha ko'proq darslar tayyorlasangiz. Bu savol emas," +
+      " iltimos tariqasida",
+  },
+  {
+    id: 7,
+    img: user,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: false,
+    comment: "Ha siz orqali xudo xohlasa!",
+  },
+  {
+    id: 8,
+    img: user4,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: true,
+    comment: "Nima uchun mening videoim qotib qoldi?",
+  },
+  {
+    id: 9,
+    img: user5,
+    name: "Javlon Shodmonov",
+    time: "23.48",
+    isRead: true,
+    comment: "Qanday qilib reaktda use effecgt hook holatiga tushadi ?",
+  },
+]
+
+export const chat = [
+  {
+    id: 1,
+    text: "Assalomu Aleykum. Men yaqinda Gudgedan ro‘yhatdan o‘tgandim. Kurs sotib olishim uchun to‘lov qila olmayabman. keyin infin bank dasturidan humo kartadagi pulni dollar qilib tashsa bo'ladi deyishdi menga. lekin infinbankni dasturidan ro'yxatdan o'tish uchun 18 yoshdan katta bo'lish kerak ekan. Naxd to‘lov qilsa bo‘ladimi",
+    side: "left",
+  },
+  { id: 2, text: "Assalomu alaykum", side: "right" },
 ]

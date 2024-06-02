@@ -38,6 +38,7 @@ module.exports = {
         greyTxt: "hsl(var(--grey-txt))",
         deepGreen: "hsl(var(--deep-green))",
         greenLight: "hsl(var(--green-light))",
+        lightBlue: "hsl(var(--light-blue))",
         //  SHADCN
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

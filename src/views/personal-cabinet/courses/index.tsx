@@ -6,7 +6,7 @@ import BackBtn from "@/components/BackBtn.tsx"
 
 const Courses = () => {
   return (
-    <div className="mb-40">
+    <div className="min-[520px]:mb-24">
       <BackBtn />
 
       <div className="mt-12 flex justify-between gap-[3rem] items-start max-[800px]:flex-col">

@@ -15,6 +15,10 @@ import ProfileLayout from "@/views/profile/layout"
 import Certification from "@/views/profile/certification"
 import PaymentHistory from "@/views/profile/payment-history"
 import ProfileInfo from "@/views/profile/info"
+import NotificationLayout from "@/views/notifications/NotificationLayout.tsx"
+import ChatField from "@/views/notifications/chat/ChatField.tsx"
+import Devices from "@/views/profile/devices"
+import Experiences from "@/views/profile/experience"
 
 export {
   AuthLayout,
@@ -33,4 +37,8 @@ export {
   Certification,
   PaymentHistory,
   ProfileInfo,
+  NotificationLayout,
+  ChatField,
+  Devices,
+  Experiences,
 }

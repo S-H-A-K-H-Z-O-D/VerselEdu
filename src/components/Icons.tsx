@@ -577,13 +577,7 @@ export function UploadFileIcon() {
 
 export const EditIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      fill="none"
-      viewBox="0 0 22 22"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 22 22">
       <path
         stroke="#5D5FEF"
         strokeLinecap="round"
@@ -591,18 +585,12 @@ export const EditIcon = () => {
         d="M21 11v6a4 4 0 01-4 4H5a4 4 0 01-4-4V5a4 4 0 014-4h6m3.686 2.023s0 1.43 1.43 2.86c1.431 1.43 2.861 1.43 2.861 1.43M8.155 14.99l3.003-.43a2.023 2.023 0 001.145-.572l8.105-8.105c.79-.79.79-2.07 0-2.86l-1.43-1.43c-.79-.79-2.071-.79-2.861 0L8.012 9.696c-.31.31-.51.711-.572 1.145l-.43 3.003a1.011 1.011 0 001.145 1.145z"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
 export const TrashIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="23"
-      fill="none"
-      viewBox="0 0 20 23"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" fill="none" viewBox="0 0 20 23">
       <path
         stroke="red"
         strokeLinecap="round"
@@ -610,18 +598,12 @@ export const TrashIcon = () => {
         d="M17 8.459l-.716 9.433c-.16 2.112-1.898 3.743-3.988 3.743H7.704c-2.09 0-3.828-1.63-3.988-3.743L3 8.459M19 6.43c-2.598-1.283-5.686-2.027-9-2.027s-6.402.744-9 2.027m7-2.027V3.39c0-1.12.895-2.027 2-2.027s2 .908 2 2.027v1.014m-4 6.082v6.081m4-6.081v6.081"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
 export const NotepadTextIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="41"
-      height="51"
-      fill="none"
-      viewBox="0 0 41 51"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="51" fill="none" viewBox="0 0 41 51">
       <path
         fill="#fff"
         stroke="#1F64E7"
@@ -652,38 +634,20 @@ export const NotepadTextIcon = () => {
         d="M6.797 40.8h15.6m-15.6-30.6h15.6-15.6zm0 7.2h25.8-25.8zm0 7.8h25.8-25.8zm0 7.8h25.8-25.8z"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
 export const PlusIcon = () => {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7 1V13M13 7L1 7"
-        stroke="#5D5FEF"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 1V13M13 7L1 7" stroke="#5D5FEF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  );
-};
+  )
+}
 
 export const GraduationCapIcon = () => {
   return (
-    <svg
-      width="88"
-      height="54"
-      viewBox="0 0 88 54"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="88" height="54" viewBox="0 0 88 54" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M80.2297 17.1981L79.75 17.3835V17.8977V30.5V34.4172C79.75 34.5136 79.758 34.6098 79.7738 34.7049L80.5102 39.1233L81.0661 42.4589C81.0915 42.6113 80.974 42.75 80.8195 42.75H78.1805C78.026 42.75 77.9085 42.6113 77.9339 42.4589L79.2262 34.7049C79.242 34.6098 79.25 34.5136 79.25 34.4172V30.5V18.6705V17.5766L78.2297 17.9709L44.0901 31.1612C44.0321 31.1836 43.9679 31.1836 43.9099 31.1612L2.83666 15.292C2.61884 15.2078 2.62507 14.8975 2.8461 14.8221L43.9193 0.819884C43.9716 0.802055 44.0284 0.802055 44.0807 0.819885L85.1539 14.8221C85.3749 14.8975 85.3812 15.2078 85.1633 15.292L80.2297 17.1981ZM70.25 26.4618V43.0462C70.25 43.1205 70.2183 43.1842 70.171 43.2243C66.3381 46.4768 61.5229 48.851 54.3068 50.7753C45.7646 53.0532 39.0941 52.7437 31.2237 50.2841C28.4393 49.414 25.4298 48.0155 22.918 46.6353C20.3893 45.2458 18.457 43.9251 17.7574 43.2252C17.7547 43.2171 17.75 43.198 17.75 43.1667V26.4618C17.75 26.286 17.9267 26.1651 18.0906 26.2288L43.3657 36.058C43.7737 36.2167 44.2263 36.2167 44.6343 36.0581L69.9094 26.2288C70.0733 26.1651 70.25 26.286 70.25 26.4618Z"
         stroke="#1F64E7"
@@ -699,5 +663,94 @@ export const GraduationCapIcon = () => {
         strokeWidth="1.5"
       />
     </svg>
-  );
-};
+  )
+}
+
+export const ActiveCompyuterIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+    <path
+      fill="#fff"
+      fillRule="evenodd"
+      d="M0 3a3 3 0 013-3h14a3 3 0 013 3v11a3 3 0 01-3 3h-6.25v2.25H13a.75.75 0 010 1.5H7a.75.75 0 010-1.5h2.25V17H3a3 3 0 01-3-3V3zm8.25 11a.75.75 0 01.75-.75h2a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75z"
+      clipRule="evenodd"
+    ></path>
+  </svg>
+)
+
+export const CompyuterIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    className="lucide lucide-monitor"
+    viewBox="0 0 24 24"
+  >
+    <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+    <path d="M8 21L16 21"></path>
+    <path d="M12 17L12 21"></path>
+  </svg>
+)
+
+export const MobileIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <rect width="14" height="20" x="5" y="2" stroke="#161719" strokeLinejoin="round" strokeWidth="1.5" rx="3"></rect>
+    <path stroke="#161719" strokeLinecap="round" strokeWidth="1.5" d="M11 19h2"></path>
+  </svg>
+)
+
+export function NotReadIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none" viewBox="0 0 24 25">
+      <path
+        stroke="#9498A7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 13.146l4.61 3.914c.785.666 2.004.564 2.652-.222L19.55 8"
+      ></path>
+    </svg>
+  )
+}
+
+export function ReadIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none" viewBox="0 0 24 25">
+      <path
+        stroke="#9498A7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2 11.646l4.609 3.914c.784.666 2.003.564 2.651-.222L16.546 6.5M10.642 14.22l1.42 1.34c.785.666 2.004.564 2.652-.222L22 6.5"
+      ></path>
+    </svg>
+  )
+}
+
+export function AttachFileIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+      <path
+        fill="#28303F"
+        fillRule="evenodd"
+        d="M12.604 4.825a5.275 5.275 0 117.46 7.46l-6.223 6.222a3.075 3.075 0 01-4.348-4.348l6.222-6.223a.875.875 0 111.237 1.238l-6.222 6.222a1.325 1.325 0 001.874 1.874l6.222-6.223a3.525 3.525 0 10-4.985-4.984L7.62 12.285a5.725 5.725 0 008.096 8.096l6.222-6.222a.875.875 0 111.238 1.237l-6.223 6.222a7.475 7.475 0 11-10.57-10.57l6.222-6.223z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  )
+}
+
+export function SentFileIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+      <path
+        stroke="#212529"
+        strokeLinecap="round"
+        strokeWidth="1.5"
+        d="M9.916 14H14M2.333 11.667h2.333m-2.333 4.667h2.333M11.03 4.97l13.102 6.547c2.047 1.023 2.047 3.942 0 4.965L11.03 23.03c-2.33 1.164-4.838-1.23-3.78-3.61l1.91-4.293c.318-.717.318-1.536 0-2.254L7.248 8.58C6.191 6.2 8.7 3.806 11.03 4.97z"
+      ></path>
+    </svg>
+  )
+}

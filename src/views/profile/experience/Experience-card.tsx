@@ -42,26 +42,25 @@ export function ExperienceCard({
             </Button>
           </DialogTrigger>
           <DialogContent className="rounded-3xl max-h-[95%] min-w-[90%] sm:min-w-[50%] lg:min-w-[30%] top-[50%] overflow-y-auto">
-            {edu ?
-              <EduModal />
-            : experience ?
-              <ExperienceModal />
-            : null}
+            {edu && <EduModal />}
+            {experience && <ExperienceModal />}
           </DialogContent>
         </Dialog>
       </div>
       <hr className="w-full h-2" />
       <div className="w-full h-[450px] p-6 max-sm:p-4 flex justify-center items-start overflow-y-auto">
-        {state.length ?
+        {state.length > 0 && (
           <div className="w-full flex flex-col gap-4">
             <ExperienceInnerCard data={state} />
           </div>
-        : <div className="lg:w-1/2 my-auto flex flex-col items-center">
+        )}
+        {!(state.length > 0) && (
+          <div className="lg:w-1/2 my-auto flex flex-col items-center">
             <Icon />
             <h2 className="mt-8 text-center font-semibold">{emptyDescriptionTitle}</h2>
             <p className="text-center text-gray-400">{emptyDescriptionBody}</p>
           </div>
-        }
+        )}
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ const CourseDetail = () => {
   const navigate = useNavigate()
 
   return (
-    <section className="mb-24">
+    <section className="min-[520px]:mb-24">
       {/*Title and Back button    //start*/}
       <div className="flex sm:items-center mb-10 max-sm:flex-col">
         <Button className="bg-white hover:bg-whitePurple text-black" onClick={() => navigate(-1)}>

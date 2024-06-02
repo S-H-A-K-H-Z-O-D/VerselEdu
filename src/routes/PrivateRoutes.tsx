@@ -11,8 +11,11 @@ import {
   Certification,
   PaymentHistory,
   ProfileInfo,
+  NotificationLayout,
+  Experiences,
+  Devices,
+  ChatField,
 } from "@/views"
-import Experiences from "@/views/profile/experience"
 
 export default function privateRoutes(): RouteObject[] {
   return [
@@ -27,6 +30,11 @@ export default function privateRoutes(): RouteObject[] {
         { path: "courses/detail", element: <CourseDetail /> },
         { path: "payment", element: <Payment /> },
         {
+          path: "notifications",
+          element: <NotificationLayout />,
+          children: [{ path: "user/:id", element: <ChatField /> }],
+        },
+        {
           path: "profile",
           element: <ProfileLayout />,
           children: [
@@ -34,7 +42,7 @@ export default function privateRoutes(): RouteObject[] {
             { path: "experiences", element: <Experiences /> },
             { path: "certifications", element: <Certification /> },
             { path: "payment_history", element: <PaymentHistory /> },
-            { path: "devices", element: "devices" },
+            { path: "devices", element: <Devices /> },
           ],
         },
       ],

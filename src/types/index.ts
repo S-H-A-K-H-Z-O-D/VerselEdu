@@ -25,3 +25,14 @@ export interface VideoPlayerProps {
   imgUrl?: string
   className?: string
 }
+
+export interface ImageData {
+  label: string
+  Component: React.FC<React.SVGProps<SVGSVGElement>>
+}
+
+export interface PaymentType {
+  id: number
+  title: string
+  img?: ImageData[]
+}

@@ -106,13 +106,15 @@ export default PaymentTypes
 
 function Type({ title, img, id, setType }: { title: string; img: any; id: number; setType: (id: number) => void }) {
   return (
-    <div onClick={() => setType(id)} className="flex flex-col justify-between p-5 min-h-[120px] cursor-pointer">
+    <div onClick={() => setType(id)} className="flex flex-col justify-between gap-4 p-5 min-h-[120px] cursor-pointer">
       <p>{title}</p>
-      {img && (
-        <div className="mt-auto">
-          <img src={img} alt="payment type images" />
+      {img ?
+        <div className="flex justify-start items-center gap-2">
+          {img.map((image: { label: string; Component: React.FC<React.SVGProps<SVGSVGElement>> }) => (
+            <image.Component key={image.label} />
+          ))}
         </div>
-      )}
+      : null}
     </div>
   )
 }
