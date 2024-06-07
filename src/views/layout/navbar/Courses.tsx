@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ArrowRightIcon } from "@/components/Icons.tsx"
 import { ModalCourses_data } from "@/constants"
 import Card from "./Card.tsx"
@@ -26,18 +26,21 @@ const Courses = ({ setIsClicked }: CoursesModalProps) => {
 
   return (
     <div className="bg-white w-full container px-0 rounded-3xl">
-      <div className="flex items-center justify-between border-b-2 p-10">
-        <h3 className="text-[2.2rem] font-medium">Kurslar to'plami</h3>
-        <button className="flex items-center justify-center text-[1.5rem] gap-4 text-deepBlue" onClick={onMove}>
+      <div className="flex items-center justify-between border-b-2 border-borderGrey p-10">
+        <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium">Kurslar to'plami</h3>
+        <button
+          className="flex items-center justify-center text-[clamp(1.4rem,_1.4vw,_1.6rem)] gap-4 text-deepBlue"
+          onClick={onMove}
+        >
           Kurslar sahifaga o’tish <ArrowRightIcon />
         </button>
       </div>
 
       <div className="mt-12 flex justify-between gap-[3rem] items-start px-10">
-        <div className="w-[25%] bg-white pb-10 border-r-2 h-[60vh] overflow-auto">
+        <div className="w-[25%] bg-white pb-10 border-r-2 border-borderGrey h-[60vh] overflow-auto">
           {categories.map((item) => (
             <div key={item.count} className="flex items-center justify-between py-5 px-7">
-              <h6 className="text-[1.6rem] font-medium">{item.name}</h6>
+              <h6 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-medium">{item.name}</h6>
               <p className="bg-bgGreyLight w-14 h-14 text-darkBlue rounded-full flex items-center justify-center">
                 {item.count}
               </p>
@@ -48,9 +51,9 @@ const Courses = ({ setIsClicked }: CoursesModalProps) => {
         <div className="w-[75%] bg-white rounded-3xl mr-10">
           <div className="grid grid-cols-3 gap-10 max-2xl:grid-cols-2">
             {ModalCourses_data.map((item, index) => (
-              <div key={index}>
+              <Link to="/courses/plan" onClick={() => setIsClicked(false)} key={index}>
                 <Card img={img} title={item.title} video={item.video} test={item.test} />
-              </div>
+              </Link>
             ))}
           </div>
         </div>

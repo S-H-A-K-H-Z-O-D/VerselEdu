@@ -2,54 +2,59 @@ import Select, { ClassNamesConfig, Props, GroupBase } from "react-select"
 import makeAnimated from "react-select/animated"
 import { cn } from "@/lib/utils"
 import { useSearchParams } from "react-router-dom"
-import { useEffect } from "react"
 import { SelectComponents } from "node_modules/react-select/dist/declarations/src/components"
 
-interface Opt {
-  value: string
-  label: string
-}
+type Opt = Record<string, any>
 
 interface IProps extends Props<Opt, false, GroupBase<Opt>> {
   filterKey: string
   options: Opt[]
   defaultValue?: Opt
+  currentPageKey?: string
+  optLabel?: string
+  optValue?: string
 }
 
 const animatedComponents: Partial<SelectComponents<Opt, false, GroupBase<Opt>>> = makeAnimated()
 
-export default function FilterSelect({ filterKey, defaultValue, options = [], classNames, ...props }: IProps) {
+export default function FilterSelect({
+  filterKey,
+  options = [],
+  classNames,
+  currentPageKey = "page",
+  optLabel = "name",
+  optValue = "id",
+  ...props
+}: IProps) {
   const [searchParams, setSearchParams] = useSearchParams()
   const filterVal = searchParams.get(filterKey)
-  const currentVal = options.find((o) => o.value === filterVal)
-
-  useEffect(() => {
-    setSearchParams((prev) => ({
-      ...Object.fromEntries(prev),
-      [filterKey]: currentVal?.value ?? defaultValue?.value ?? "",
-    }))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const currentVal = options.find((o) => String(o[optValue]) === filterVal)
 
   const handleOnChange = (opt: any) => {
-    setSearchParams((prev) => ({
-      ...Object.fromEntries(prev),
-      currentPage: "1",
-      [filterKey]: opt ? opt.value : "",
-    }))
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev)
+      if (opt) {
+        newParams.set(filterKey, String(opt[optValue]))
+      } else {
+        newParams.delete(filterKey)
+      }
+      newParams.set(currentPageKey, "1")
+      return newParams
+    })
   }
+
   return (
     <Select
-      getOptionLabel={(opt) => opt.label}
-      getOptionValue={(opt) => opt.value}
-      defaultValue={defaultValue}
-      value={currentVal}
+      getOptionLabel={(opt) => opt[optLabel]}
+      getOptionValue={(opt) => opt[optValue]}
+      defaultValue={currentVal}
       options={options}
       components={animatedComponents}
       isClearable
       classNames={{ ...defaultClassNames, ...classNames }}
       onChange={handleOnChange}
       {...props}
+      isMulti={false}
     />
   )
 }

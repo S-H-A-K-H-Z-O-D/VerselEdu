@@ -11,25 +11,29 @@ const Card = ({ img, title, video, test }: ProgressCardProps) => {
 
         <div className="flex flex-col gap-2 p-4 justify-between">
           <div className="max-w-[270px]">
-            <p className="text-[1.5rem] font-medium">{title}</p>
+            <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-medium">{title}</p>
             <div className="flex items-center gap-x-5 mt-2 flex-wrap">
               <div className="flex items-center gap-2">
-                <VideoIcon isBlue={true} />
-                <p className="text-[1.3rem]">
+                <i className="[&_svg_path]:fill-lightPurple">
+                  <VideoIcon />
+                </i>
+                <p className="text-[clamp(1.2rem,_1.2vw,_1.4rem)]">
                   <span className="font-medium pr-2">{video}</span>
                   Video
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <DocumentIcon isBlue={true} />
-                <p className="text-[1.3rem]">
+                <i className="[&_svg_path]:fill-lightPurple">
+                  <DocumentIcon />
+                </i>
+                <p className="text-[clamp(1.2rem,_1.2vw,_1.4rem)]">
                   <span className="font-medium pr-2">{test}</span>
                   Test
                 </p>
               </div>
             </div>
           </div>
-          <p className="blue-color text-2xl text-deepBlue font-semibold text-[1.6rem]">
+          <p className="blue-color text-2xl text-deepBlue font-semibold text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
             {500.0} <sup className="text-[1rem] font-medium">so'm</sup>
           </p>
         </div>

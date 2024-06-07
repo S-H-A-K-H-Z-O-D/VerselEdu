@@ -2,7 +2,7 @@ import { paymentTypes_data } from "@/constants"
 import InputField from "@/components/form/InputField.tsx"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/shadcn/ui/button.tsx"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 import { useState } from "react"
 import SelectField from "@/components/form/SelectField.tsx"
 import PhoneInputField from "@/components/form/PhoneInputField.tsx"
@@ -24,27 +24,32 @@ const paymentPeriodOptions = [
 const PaymentTypes = () => {
   const methods = useForm<IForm>()
   const { handleSubmit, control } = methods
-  const [type, setType] = useState(0)
   const [isPaid, setIsPaid] = useState(false)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const onSubmit = (values: IForm) => {
     console.log(values)
     setIsPaid(true)
   }
 
+  const paymentType = searchParams.get("type")
+
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {paymentTypes_data.map((item, index) => (
-          <div key={index} className={`${type === item.id && "border-deepBlue"} border-2 rounded-2xl`}>
-            <Type title={item.title} img={item.img} id={item.id} setType={setType} />
+          <div
+            key={index}
+            className={`${paymentType === item.type && "border-deepBlue"} border-2 border-borderGrey rounded-2xl`}
+          >
+            <Type title={item.title} img={item.img} type={item.type} setSearchParams={setSearchParams} />
           </div>
         ))}
       </div>
 
       {/*Form     //start*/}
       <form className="mt-16" onSubmit={handleSubmit(onSubmit)}>
-        {type === 4 && (
+        {paymentType === "budget-account" && (
           <SelectField
             control={control}
             name="month"
@@ -75,11 +80,11 @@ const PaymentTypes = () => {
         </div>
         {/*Input for Card number     //finish*/}
 
-        {type === 4 && (
+        {paymentType === "budget-account" && (
           <PhoneInputField
             control={control}
             name={"phone_number"}
-            className="mt-5 selectHidden "
+            className="mt-5"
             label="Telefon raqamingiz"
             required
           />
@@ -104,17 +109,20 @@ const PaymentTypes = () => {
 }
 export default PaymentTypes
 
-function Type({ title, img, id, setType }: { title: string; img: any; id: number; setType: (id: number) => void }) {
+function Type({ title, img, type, setSearchParams }: { title: string; img: any; type: string; setSearchParams: any }) {
   return (
-    <div onClick={() => setType(id)} className="flex flex-col justify-between gap-4 p-5 min-h-[120px] cursor-pointer">
+    <div
+      onClick={() => setSearchParams({ type: type })}
+      className="flex flex-col justify-between gap-4 p-5 min-h-[120px] cursor-pointer"
+    >
       <p>{title}</p>
-      {img ?
+      {img && (
         <div className="flex justify-start items-center gap-2">
           {img.map((image: { label: string; Component: React.FC<React.SVGProps<SVGSVGElement>> }) => (
             <image.Component key={image.label} />
           ))}
         </div>
-      : null}
+      )}
     </div>
   )
 }

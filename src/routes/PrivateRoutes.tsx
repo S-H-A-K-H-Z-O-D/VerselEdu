@@ -15,6 +15,7 @@ import {
   Experiences,
   Devices,
   ChatField,
+  Installments,
 } from "@/views"
 
 export default function privateRoutes(): RouteObject[] {
@@ -34,6 +35,7 @@ export default function privateRoutes(): RouteObject[] {
           element: <NotificationLayout />,
           children: [{ path: "user/:id", element: <ChatField /> }],
         },
+        { path: "installments", element: <Installments /> },
         {
           path: "profile",
           element: <ProfileLayout />,

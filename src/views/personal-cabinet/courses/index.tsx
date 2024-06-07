@@ -18,8 +18,8 @@ const Courses = () => {
 
         <div className="w-[75%] bg-white rounded-3xl mr-10 max-[800px]:w-full">
           {/*Courses filter     //start*/}
-          <div className="flex min-[1200px]:items-center justify-between border-b-2 p-10 gap-7 max-[1200px]:flex-col max-[450px]:p-5">
-            <h3 className="text-[2.2rem] font-medium">Barcha kurslar</h3>
+          <div className="flex min-[1200px]:items-center justify-between border-b-2 border-borderGrey p-10 gap-7 max-[1200px]:flex-col max-[450px]:p-5">
+            <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium">Barcha kurslar</h3>
             <Filters />
           </div>
           {/*Courses filter    //finish*/}

@@ -18,7 +18,7 @@ export default function ConfirmationPhone() {
   return (
     <form onSubmit={onSubmit}>
       <main className="flex flex-col gap-[0.4rem] mb-[4rem]">
-        <div className="mb-[0.4rem] flex justify-between gap-8 items-center text-[1.4rem] text-grey64 font-semibold">
+        <div className="mb-[0.4rem] flex justify-between gap-8 items-center text-[clamp(1.2rem,_1.2vw,_1.4rem)] text-grey64 font-semibold">
           <button
             onClick={() => {
               navigate(-1)
@@ -30,8 +30,8 @@ export default function ConfirmationPhone() {
           </button>
           <p>Qadam - 2/4</p>
         </div>
-        <h2 className="text-black text-[3.2rem] font-semibold">Ro‘yhatdan o‘tish</h2>
-        <p className="text-darkGray70 text-[1.4rem]">Tasdiqlash kodi ushbu raqamga yuboriladi:</p>
+        <h2 className="text-black text-[clamp(2.4rem,_2.6vw,_3.2rem)] font-semibold">Ro‘yhatdan o‘tish</h2>
+        <p className="text-darkGray70 text-[clamp(1.2rem,_1.2vw,_1.4rem)]">Tasdiqlash kodi ushbu raqamga yuboriladi:</p>
         <p>+998 99 123 45 67</p>
       </main>
 

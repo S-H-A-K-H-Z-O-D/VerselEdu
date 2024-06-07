@@ -24,8 +24,8 @@ const Payment = () => {
       </div>
 
       <div className="max-w-[1100px] bg-white rounded-3xl flex max-md:flex-col">
-        <div className="max-w-[800px] p-10 md:border-r-2 max-md:border-b-2 max-[450px]:p-5">
-          <h3 className="text-[2.2rem] font-medium ">
+        <div className="max-w-[800px] p-10 md:border-r-2 border-borderGrey max-md:border-b-2 max-[450px]:p-5">
+          <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium ">
             3D smax – Modelling (Boshlovchilar uchun) kursini boshlash uchun to’lovni amalga oshiring
           </h3>
 
@@ -44,7 +44,7 @@ const Payment = () => {
                 <p className="text-end">0 so‘m</p>
               </li>
             </ul>
-            <div className="flex justify-between font-semibold text-[1.8rem]">
+            <div className="flex justify-between font-semibold text-[clamp(1.5rem,_1.5vw,_1.8rem)]">
               <p className="text-grey64">Umumiy narxi</p>
               <p className="text-deepBlue text-end">9.550.000 so‘m</p>
             </div>
@@ -53,7 +53,7 @@ const Payment = () => {
           <Accordion type="single" collapsible className="space-y-3">
             <AccordionItem className="border-none" value={"45"}>
               <AccordionTrigger className="relative data-[state=open]:text-black pb-5 pr-7 flex justify-start gap-5 hover:no-underline">
-                <p className="text-[1.8rem]">Promokod ishlatish</p>
+                <p className="text-[clamp(1.5rem,_1.5vw,_1.8rem)]">Promokod ishlatish</p>
               </AccordionTrigger>
               <AccordionContent className="space-y-5">
                 <form className="relative max-w-[400px]" onSubmit={handleSubmit(onSubmit)}>
@@ -72,7 +72,7 @@ const Payment = () => {
         </div>
 
         <div className="p-10">
-          <h3 className="text-[2.2rem] font-medium mb-10">To’lov turini tanlang</h3>
+          <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium mb-10">To’lov turini tanlang</h3>
 
           <PaymentTypes />
         </div>

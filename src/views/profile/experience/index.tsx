@@ -5,11 +5,13 @@ import { useState } from "react"
 export default function Experiences() {
   const [educationalData, setEducationalData] = useState([
     {
+      id: 1,
       position: "Dasturiy Injenering",
       name: "Toshkent Axborotot Texnologoiyalar Universiteti",
       date: new Date(),
     },
     {
+      id: 2,
       position: "Axborot tizimi va jamoatchilik bilan aloqador",
       name: "O'zbekiston Davlat Jahon Tillari Universiteti",
       date: new Date(),
@@ -20,7 +22,7 @@ export default function Experiences() {
   return (
     <div className="flex flex-col justify-start items-center">
       <h1 className="text-4xl font-medium">Shaxsiy tajribalarim</h1>
-      <hr className="w-full h-2 mt-8 max-sm:mt-6" />
+      <hr className="w-full bg-borderGrey h-1 mt-8 max-sm:mt-6" />
       <div className="w-full p-8 max-sm:6 flex flex-col sm:flex-row justify-start items-center gap-6 max-sm:gap-4">
         <ExperienceCard
           edu

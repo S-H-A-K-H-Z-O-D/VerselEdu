@@ -47,7 +47,7 @@
 
     /*CUSTOM COLORS */
     --light-purple: 239 82% 65%;
-    --white-purple: 240, 100%, 93%;
+    --white-purple: 240, 100%, 94%;
     --deep-blue: 240, 75.8%, 62.9%;
     --black: 216, 6%, 9%;
     --red: 0, 79%, 63%;
@@ -61,6 +61,8 @@
     --opacity-dark: 0, 0%, 0%, 0.2;
     --opacity-white: 255, 100%, 100%, 0.7;
     --opacity-dark70: 0, 0%, 0%, 0.7;
+    --grey-txt: 260, 3%, 21%;
+    /*--grey-txt: 227, 10%, 62%;*/
     --deep-green: 126, 100%, 20%;
     --green-light: 126, 87%, 88%;
     --light-blue: 240, 94%, 95%;
@@ -76,8 +78,8 @@
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 0 0% 50%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -94,6 +96,27 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+
+    /*Custom colors*/
+    --light-purple: 239 82% 65%;
+    --white-purple: 208, 100%, 17%;
+    --deep-blue: 240, 75.8%, 62.9%;
+    --black: 216, 65%, 95%;
+    --red: 0, 79%, 63%;
+    --red-light: 0, 79%, 95%;
+    --border-grey: 240, 12%, 35%;
+    --dark-blue: 215, 11%, 60%;
+    --bg-grey-light: 206, 57%, 7%;
+    --grey-64: 240, 1%, 67%;
+    --white: 205, 45%, 16%;
+    --dark-gray-70: 208, 7%, 46%;
+    --opacity-dark: 0, 0%, 0%, 0.2;
+    --opacity-white: 255, 100%, 100%, 0.7;
+    --opacity-dark70: 0, 0%, 0%, 0.7;
+    --grey-txt: 227, 10%, 85%;
+    --deep-green: 126, 100%, 20%;
+    --green-light: 126, 87%, 88%;
+    --light-blue: 240, 64%, 25%;
   }
 }
 
@@ -146,11 +169,12 @@
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body {
     font-family: "Golos Text Variable";
-    @apply bg-background text-[1.6rem] text-black;
+    @apply bg-bgGreyLight text-[clamp(1.4rem,_1.4vw,_1.6rem)];
   }
 
   textarea {
@@ -184,6 +208,11 @@
     background: #555;
   }
 }
+
+.css-1dimb5e-singleValue{
+  color: hls(var(--black))!important;
+}
+
 
 /* Scrollbar style */
 

@@ -17,14 +17,13 @@ interface IForm {
 
 const ProfileInfo = () => {
   const methods = useForm<IForm>()
-  const { handleSubmit, watch } = methods
+  const { handleSubmit, formState } = methods
 
   const onSubmit = (values: IForm) => {
     console.log(values)
   }
 
-  const { name, surname, age, sex, country, region } = watch()
-  const isFormValid = Boolean(name && surname && age && sex && country && region)
+  const isFormValid = formState.isValid
 
   return (
     <section>
@@ -33,7 +32,7 @@ const ProfileInfo = () => {
           <h2 className="font-semibold text-[clamp(1.8rem,_1.8vw,_2.4rem)]">Akkountingiz ma’lumotlari</h2>
           <Button
             disabled={!isFormValid}
-            className={`border ${!isFormValid && "bg-bgGreyLight text-grey64"}`}
+            className={`border  ${!isFormValid && "bg-bgGreyLight text-grey64"}`}
             type="submit"
           >
             Saqlash

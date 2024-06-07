@@ -68,3 +68,10 @@ export const useGetBrowserDeviceInfo = (): string => {
 
   return `${os}, ${browser}`
 }
+
+export const setDarkMode = () => {
+  document.querySelector("body")?.classList.add("dark")
+}
+export const setLightMode = () => {
+  document.querySelector("body")?.classList.remove("dark")
+}

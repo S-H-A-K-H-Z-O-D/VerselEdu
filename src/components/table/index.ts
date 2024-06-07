@@ -1,10 +1,5 @@
 export const rowsPerPageOptions = [
-  { label: "10", value: 10 },
-  { label: "20", value: 20 },
-  { label: "30", value: 30 },
+  { label: "10", value: "10" },
+  { label: "20", value: "20" },
+  { label: "30", value: "30" },
 ]
-
-export interface IPaginationQueryParams {
-  page: string
-  page_size: string
-}

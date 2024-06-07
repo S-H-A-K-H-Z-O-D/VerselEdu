@@ -13,7 +13,7 @@ const Filters = () => {
   return (
     <div className="flex min-md:items-center gap-5 max-md:flex-col">
       <Select>
-        <SelectTrigger className="w-[220px] max-md:w-full">
+        <SelectTrigger className="w-[220px] max-md:w-full border-borderGrey">
           <SelectValue placeholder="Haftalik" />
         </SelectTrigger>
         <SelectContent>
@@ -28,12 +28,12 @@ const Filters = () => {
         </SelectContent>
       </Select>
       <div className="relative">
-        <div className="absolute top-[10px] left-5">
+        <div className="absolute top-[10px] left-5 [&_svg_path]:stroke-greyTxt">
           <SearchIcon />
         </div>
         <input
           type="text"
-          className="border text-[1.2rem] py-4 rounded-2xl w-[300px] pl-16 focus:outline-none max-md:w-full"
+          className="border border-borderGrey bg-white text-[clamp(1rem,_1vw,_1.2rem)] py-4 rounded-2xl w-[300px] pl-16 focus:outline-none max-md:w-full"
           placeholder="Yoqtirgan kursingizni qidiring"
         />
       </div>

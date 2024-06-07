@@ -18,13 +18,16 @@ const Table = () => {
       <table className="w-full text-left rtl:text-right">
         <thead className="uppercase bg-bgGreyLight">
           <tr className="">
-            <th scope="col" className="px-6 py-3 font-semibold text-grey64 text-[1.6rem] rounded-l-2xl">
+            <th
+              scope="col"
+              className="px-6 py-3 font-semibold text-grey64 text-[clamp(1.4rem,_1.4vw,_1.6rem)] rounded-l-2xl"
+            >
               Qurilma nomi
             </th>
-            <th scope="col" className="px-6 py-3 font-semibold text-grey64 text-[1.6rem]">
+            <th scope="col" className="px-6 py-3 font-semibold text-grey64 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
               SANASI
             </th>
-            <th scope="col" className="px-6 py-3 font-semibold text-grey64 text-[1.6rem]">
+            <th scope="col" className="px-6 py-3 font-semibold text-grey64 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
               Harakatlar
             </th>
           </tr>
@@ -34,8 +37,11 @@ const Table = () => {
             const { id, name, device_type } = item
             const date = useDateFormatter2(item.data)
             return (
-              <tr key={id} className="bg-white border-b">
-                <td scope="row" className="px-6 py-4 flex items-center gap-4 font-medium text-[1.6rem]">
+              <tr key={id} className="bg-white border-b border-borderGrey">
+                <td
+                  scope="row"
+                  className="px-6 py-4 flex items-center gap-4 font-medium text-[clamp(1.4rem,_1.4vw,_1.6rem)]"
+                >
                   {device_type === "compyuter" ?
                     <div className="p-4 w-fit bg-[#00CD69] rounded-xl">
                       <ActiveCompyuterIcon />
@@ -49,8 +55,8 @@ const Table = () => {
                     <span className="text-xl text-green-600 font-medium">Mazkur qurilma</span>
                   </div>
                 </td>
-                <td className="px-6 py-4 text-[1.6rem]">{date}</td>
-                <td className="px-6 py-4 text-[1.6rem]">
+                <td className="px-6 py-4 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">{date}</td>
+                <td className="px-6 py-4 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
                   <span className="px-5 py-2 text-green-600 font-medium rounded-full">Faol</span>
                 </td>
               </tr>
@@ -60,17 +66,20 @@ const Table = () => {
             const { id, name, device_type } = item
             const date = useDateFormatter2(item.data)
             return (
-              <tr key={id} className="bg-white border-b">
-                <td scope="row" className="px-6 py-4 flex items-center gap-4 font-medium text-[1.6rem]">
-                  <div className="p-4 w-fit bg-[#F5F5F7] rounded-xl">
+              <tr key={id} className="bg-white border-b border-borderGrey">
+                <td
+                  scope="row"
+                  className="px-6 py-4 flex items-center gap-4 font-medium text-[clamp(1.4rem,_1.4vw,_1.6rem)]"
+                >
+                  <div className="p-4 w-fit bg-bgGreyLight rounded-xl [&_svg_rect]:stroke-greyTxt [&_svg_path]:stroke-greyTxt">
                     {device_type === "compyuter" ?
                       <CompyuterIcon />
                     : <MobileIcon />}
                   </div>
                   <span className="text-nowrap">{name}</span>
                 </td>
-                <td className="px-6 py-4 text-[1.6rem] text-nowrap">{date}</td>
-                <td className="px-6 py-4 text-[1.6rem]">
+                <td className="px-6 py-4 text-[clamp(1.4rem,_1.4vw,_1.6rem)] text-nowrap">{date}</td>
+                <td className="px-6 py-4 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
                   <span
                     className="px-5 py-2 text-red font-medium rounded-full cursor-pointer"
                     onClick={() => onDeleteHandler(id)}

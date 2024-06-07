@@ -330,6 +330,17 @@ export function HomeIcon() {
   )
 }
 
+export function EnvelopeIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 1792 1792">
+      <path
+        fill="#9498A7"
+        d="M1792 710v794q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V710q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38T639 1015q-91-64-262-182.5T172 690q-62-42-117-115.5T0 438q0-78 41.5-130T160 256h1472q65 0 112.5 47t47.5 113z"
+      ></path>
+    </svg>
+  )
+}
+
 export function BellIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" fill="none" viewBox="0 0 18 22">
@@ -341,7 +352,7 @@ export function BellIcon() {
   )
 }
 
-export function MenuIcon({ width = 24, height = 24 }) {
+export function MenuIcon({ width = 24, height = 24 }: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 24 24">
       <path stroke="#161719" strokeLinecap="round" strokeWidth="1.5" d="M7 8h10M7 12h10M7 16h10"></path>
@@ -363,11 +374,11 @@ export function ArrowRightIcon() {
   )
 }
 
-export function DocumentIcon({ isBlue = false }: { isBlue?: boolean }) {
+export function DocumentIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 20 20">
       <path
-        fill={`${isBlue ? "#5D5FEF" : "#9498A7"}`}
+        fill="#9498A7"
         fillRule="evenodd"
         d="M5.833 1.667A3.333 3.333 0 002.5 5v10a3.333 3.333 0 003.333 3.333h8.334A3.333 3.333 0 0017.5 15V6.38c0-.884-.351-1.731-.976-2.356l-1.381-1.381a3.333 3.333 0 00-2.357-.976H5.833zm.834 3.541a.625.625 0 100 1.25h6.666a.625.625 0 100-1.25H6.667zM6.042 10c0-.345.28-.625.625-.625h6.666a.625.625 0 110 1.25H6.667A.625.625 0 016.042 10zm.625 3.541a.625.625 0 100 1.25H10a.625.625 0 100-1.25H6.667z"
         clipRule="evenodd"
@@ -376,11 +387,11 @@ export function DocumentIcon({ isBlue = false }: { isBlue?: boolean }) {
   )
 }
 
-export function VideoIcon({ isBlue = false }: { isBlue?: boolean }) {
+export function VideoIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 20 20">
       <path
-        fill={`${isBlue ? "#5D5FEF" : "#9498A7"}`}
+        fill="#9498A7"
         fillRule="evenodd"
         d="M1.667 7.333a4 4 0 014-4h3.666a4 4 0 014 4v5.334a4 4 0 01-4 4H5.667a4 4 0 01-4-4V7.333zm9.166.167a1.667 1.667 0 11-3.333 0 1.667 1.667 0 013.333 0zm4.041 5.477l-.29-.31V7.333l.29-.31c1.24-1.323 3.46-.445 3.46 1.368v3.218c0 1.813-2.22 2.69-3.46 1.368z"
         clipRule="evenodd"
@@ -751,6 +762,33 @@ export function SentFileIcon() {
         strokeWidth="1.5"
         d="M9.916 14H14M2.333 11.667h2.333m-2.333 4.667h2.333M11.03 4.97l13.102 6.547c2.047 1.023 2.047 3.942 0 4.965L11.03 23.03c-2.33 1.164-4.838-1.23-3.78-3.61l1.91-4.293c.318-.717.318-1.536 0-2.254L7.248 8.58C6.191 6.2 8.7 3.806 11.03 4.97z"
       ></path>
+    </svg>
+  )
+}
+
+export function SunIcon() {
+  return (
+    // eslint-disable-next-line react/no-unknown-property
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" aria-hidden="true" viewBox="0 0 24 24">
+      <g
+        stroke="#fcfcfc"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        clipPath="url(#clip0_5617_86669)"
+      >
+        <path fill="#202124" d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
+        <path
+          fill="#20212400"
+          d="M12 5V3M17 7l1.4-1.4M19 12h2M17 17l1.4 1.4M12 19v2M7 17l-1.4 1.4M6 12H4M7 7L5.6 5.6"
+        ></path>
+      </g>
+      {/* eslint-disable-next-line react/no-unknown-property */}
+      <defs fill="#fff">
+        <clipPath id="clip0_5617_86669">
+          <path fill="#fff" d="M0 0H24V24H0z"></path>
+        </clipPath>
+      </defs>
     </svg>
   )
 }

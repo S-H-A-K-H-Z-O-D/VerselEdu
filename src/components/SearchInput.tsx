@@ -5,9 +5,16 @@ import { SearchIcon } from "./Icons"
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   searchKey?: string
+  currentPageKey?: string
 }
 
-export default function SearchInput({ searchKey = "search", className, placeholder = "...", ...props }: IProps) {
+export default function SearchInput({
+  searchKey = "search",
+  className,
+  placeholder = "...",
+  currentPageKey = "page",
+  ...props
+}: IProps) {
   const [searchParams, setSearchParams] = useSearchParams()
   const searchVal = searchParams.get(searchKey) ?? ""
   const timeoutIdRef = useRef<number | null>(null)
@@ -28,13 +35,13 @@ export default function SearchInput({ searchKey = "search", className, placehold
     }
 
     timeoutIdRef.current = window.setTimeout(() => {
-      setSearchParams((prev) => ({ ...Object.fromEntries(prev), [searchKey]: value }))
+      setSearchParams((prev) => ({ ...Object.fromEntries(prev), [searchKey]: value, [currentPageKey]: "1" }))
     }, 500)
   }
 
   return (
     <label className={cn("relative flex items-center max-w-[36rem] w-full", className)}>
-      <span className="absolute left-[1.6rem]">
+      <span className="absolute left-[1.6rem] [&_svg_path]:stroke-greyTxt">
         <SearchIcon />
       </span>
       <input

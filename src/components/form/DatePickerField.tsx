@@ -19,7 +19,6 @@ export default function DatePickerField<IForm extends FieldValues>({
   control,
   label,
   required = false,
-  placeholder,
   className,
   ...props
 }: IProps<IForm> & Partial<ReactDatePickerProps>) {
@@ -43,12 +42,11 @@ export default function DatePickerField<IForm extends FieldValues>({
       <label className="relative flex items-center">
         <DatePicker
           selected={value}
-          className="w-full border border-borderGrey h-[5.6rem] rounded-[1.2rem] outline-borderGrey px-[2.4rem]"
+          className="w-full bg-white border border-borderGrey h-[5.6rem] rounded-[1.2rem] outline-borderGrey px-[2.4rem]"
           wrapperClassName="w-full"
           clearButtonClassName="!right-[5.6rem]"
           isClearable
           showMonthDropdown
-          placeholderText={placeholder}
           showYearDropdown
           popperPlacement="bottom-end"
           {...field}

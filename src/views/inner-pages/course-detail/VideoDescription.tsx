@@ -12,15 +12,15 @@ const VideoDescription = () => {
 
   return (
     <section className="mt-5 border-t-2 pt-7">
-      <h5 className="text-[1.8rem] font-medium pb-5 max-sm:text-[1.6rem]">Dars tavsiflari</h5>
+      <h5 className="text-[clamp(1.5rem,_1.5vw,_1.8rem)] font-medium pb-5">Dars tavsiflari</h5>
 
       <div className="bg-bgGreyLight p-7 rounded-3xl">
-        <p className="text-[1.8rem] font-medium mb-5 max-sm:text-[1.6rem]">
+        <p className="text-[clamp(1.5rem,_1.5vw,_1.8rem)] font-medium mb-5">
           Figma dasturini o'rnatish va dastur interfeysi bilan tanishish
         </p>
 
         <div className={`flex ${showMore ? "flex-col" : ""}`}>
-          <div className={`${showMore ? "" : "line-clamp-1"} text-[1.5rem]`}>
+          <div className={`${showMore ? "" : "line-clamp-1"} text-[clamp(1.4rem,_1.4vw,_1.6rem)]`}>
             <ol className="list-decimal list-inside mb-4 text-grey64">
               {data.steps.map((step, index) => (
                 <li key={index} className="mb-2">
@@ -29,7 +29,7 @@ const VideoDescription = () => {
               ))}
             </ol>
 
-            <h2 className="text-[1.5rem] font-light underline text-deepBlue mb-5 mt-10">
+            <h2 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-light underline text-deepBlue mb-5 mt-10">
               Bajarish uchun asosiy qadamlar:
             </h2>
             <div className="flex gap-4 mb-4 max-[1320px]:flex-col">
@@ -43,7 +43,9 @@ const VideoDescription = () => {
               ))}
             </div>
             <p className="mb-4 text-grey64">{data.explanation}</p>
-            <h2 className="text-[1.5rem] font-light underline text-deepBlue mb-5">O'quvchilar uchun tushuncha:</h2>
+            <h2 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-light underline text-deepBlue mb-5">
+              O'quvchilar uchun tushuncha:
+            </h2>
             <p className="mb-2 text-grey64">Mana muhimlariga quyidagi kodni yozamiz:</p>
             <pre className="text-grey64 p-4 rounded mb-4">
               <code>{data.codeSnippet}</code>
@@ -51,10 +53,12 @@ const VideoDescription = () => {
             <p className="mb-4 text-grey64">{data.codeExplanation}</p>
             <p className="mb-4 text-grey64">{data.mainMessage}</p>
 
-            <h2 className="text-[1.5rem] font-light underline text-deepBlue mb-5">Bajarish uchun asosiy qadamlar:</h2>
+            <h2 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-light underline text-deepBlue mb-5">
+              Bajarish uchun asosiy qadamlar:
+            </h2>
             <img src={banner3} alt="Boxes" className="w-full border rounded mb-4 max-w-[400px]" />
             <p className="mb-4 text-grey64">{data.organizerDescription}</p>
-            <h2 className="text-[1.5rem] font-light underline text-deepBlue mb-5">
+            <h2 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-light underline text-deepBlue mb-5">
               O'zgaruvchilarni nom berishda quyidagilarga e'tibor qiling:
             </h2>
             <ul className="list-disc list-inside mb-4 text-grey64">
@@ -64,7 +68,9 @@ const VideoDescription = () => {
                 </li>
               ))}
             </ul>
-            <h2 className="text-[1.5rem] font-light underline text-deepBlue mb-5">O'zgaruvchiga misollar:</h2>
+            <h2 className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-light underline text-deepBlue mb-5">
+              O'zgaruvchiga misollar:
+            </h2>
             <ul className="list-disc list-inside mb-4 text-grey64">
               {data.organizerExamples.map((example, index) => (
                 <li key={index} className="mb-2">

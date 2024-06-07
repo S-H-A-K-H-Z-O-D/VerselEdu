@@ -1,5 +1,5 @@
 export interface CoursesModalProps {
-  setIsClicked?: (isClicked: boolean) => void
+  setIsClicked: (isClicked: boolean) => void
 }
 
 export interface ProgressCardProps {
@@ -34,5 +34,11 @@ export interface ImageData {
 export interface PaymentType {
   id: number
   title: string
+  type: string
   img?: ImageData[]
+}
+
+export interface NavbarProps {
+  isDark: boolean
+  setIsDark: (isDark: boolean) => void
 }

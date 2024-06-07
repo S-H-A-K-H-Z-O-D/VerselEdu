@@ -19,6 +19,7 @@ import NotificationLayout from "@/views/notifications/NotificationLayout.tsx"
 import ChatField from "@/views/notifications/chat/ChatField.tsx"
 import Devices from "@/views/profile/devices"
 import Experiences from "@/views/profile/experience"
+import Installments from "./installments"
 
 export {
   AuthLayout,
@@ -41,4 +42,5 @@ export {
   ChatField,
   Devices,
   Experiences,
+  Installments,
 }

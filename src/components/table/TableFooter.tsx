@@ -1,47 +1,66 @@
+/* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
 import { ChevronLeftIcon, ChevronRightIcon, DoubleArrowLeftIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons"
 import { Button } from "../shadcn/ui/button"
 import { useSearchParams } from "react-router-dom"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import ReactSelect from "react-select"
 import { cn } from "@/lib/utils"
 import { rowsPerPageOptions } from "."
 
 interface IPaginationProps {
-  className?: string
   pageCount: number
+  className?: string
+  currentPageKey?: string
+  pageSizeKey?: string
 }
 
 interface IPaginationParams {
-  currentPage: number
-  pageSize: number
+  currentPage?: string
+  pageSize?: string
 }
 
-export function TablePagination({ className, pageCount }: IPaginationProps) {
+export function TableFooter({
+  className,
+  pageCount,
+  currentPageKey = "page",
+  pageSizeKey = "page_size",
+}: IPaginationProps) {
   const [searchParams, setSearchParams] = useSearchParams()
-  const currentPage = Number(searchParams.get("currentPage")) || 1
-  const pageSize = Number(searchParams.get("pageSize")) || rowsPerPageOptions[0].value
-  const [params, setParams] = useState<IPaginationParams>({ currentPage, pageSize })
+  const current = searchParams.get(currentPageKey) || "1"
+  const pageS = searchParams.get(pageSizeKey) || rowsPerPageOptions[0].value
   const jumpInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     setSearchParams((prev) => ({
       ...Object.fromEntries(prev),
-      currentPage: params.currentPage.toString(),
-      pageSize: params.pageSize.toString(),
+      [currentPageKey]: current,
+      [pageSizeKey]: pageS,
     }))
-  }, [params, setSearchParams])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function setParams({ currentPage, pageSize }: IPaginationParams) {
+    setSearchParams((prev) => {
+      const prevObj = Object.fromEntries(prev)
+      return {
+        ...prevObj,
+        [currentPageKey]: currentPage || prevObj[currentPageKey],
+        [pageSizeKey]: pageSize || prevObj[pageSizeKey],
+      }
+    })
+  }
 
   const handleJump = () => {
     const jumpVal = jumpInputRef.current?.value
     if (jumpVal && +jumpVal > 0 && !(+jumpVal > pageCount)) {
-      setParams((prev) => ({ ...prev, currentPage: +jumpVal }))
+      setParams({ currentPage: jumpVal })
     }
   }
 
   const handleJumpOnKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const jumpVal = jumpInputRef.current?.value
     if (jumpVal && +jumpVal > 0 && !(+jumpVal > pageCount) && e.key === "Enter") {
-      setParams((prev) => ({ ...prev, currentPage: +jumpVal }))
+      setParams({ currentPage: jumpVal })
     }
   }
 
@@ -52,15 +71,14 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
           <p className="font-medium">Rows per page</p>
           <ReactSelect
             options={rowsPerPageOptions}
-            value={rowsPerPageOptions.find((item) => item.value === params.pageSize)}
+            defaultValue={rowsPerPageOptions.find((item) => item.value === pageS)}
             onChange={(opt) => {
-              setParams((prev) => ({
-                ...prev,
-                currentPage: 1,
-                pageSize: opt?.value ?? 10,
-              }))
+              setParams({
+                currentPage: "1",
+                pageSize: opt?.value || "10",
+              })
             }}
-            className="text-[1.4rem]"
+            className="text-[clamp(1.2rem,_1.2vw,_1.4rem)] [&>div]:bg-white"
           />
         </div>
 
@@ -68,7 +86,7 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
           <>
             <main className="flex items-center gap-4">
               <p className="font-medium">
-                Page {currentPage} of {pageCount}
+                Page {current} of {pageCount}
               </p>
               <div className="flex items-center space-x-2">
                 <Button
@@ -76,9 +94,9 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
                   size={"sm"}
                   className="h-12 w-12"
                   onClick={() => {
-                    setParams((prev) => ({ ...prev, currentPage: 1 }))
+                    setParams({ currentPage: "1" })
                   }}
-                  disabled={currentPage < 2}
+                  disabled={current < "2"}
                 >
                   <span className="sr-only">Go to first page</span>
                   <DoubleArrowLeftIcon className="h-4 w-4" />
@@ -87,9 +105,9 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
                   variant="outline"
                   className="h-12 w-12 p-0"
                   onClick={() => {
-                    setParams((prev) => ({ ...prev, currentPage: prev.currentPage - 1 }))
+                    setParams({ currentPage: String(+current - 1) })
                   }}
-                  disabled={currentPage < 2}
+                  disabled={current < "2"}
                 >
                   <span className="sr-only">Go to previous page</span>
                   <ChevronLeftIcon className="h-4 w-4" />
@@ -98,9 +116,9 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
                   variant="outline"
                   className="h-12 w-12 p-0"
                   onClick={() => {
-                    setParams((prev) => ({ ...prev, currentPage: prev.currentPage + 1 }))
+                    setParams({ currentPage: String(+current + 1) })
                   }}
-                  disabled={currentPage >= pageCount}
+                  disabled={+current >= pageCount}
                 >
                   <span className="sr-only">Go to next page</span>
                   <ChevronRightIcon className="h-4 w-4" />
@@ -110,9 +128,9 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
                   size={"sm"}
                   className="h-12 w-12"
                   onClick={() => {
-                    setParams((prev) => ({ ...prev, currentPage: pageCount }))
+                    setParams({ currentPage: pageCount.toString() })
                   }}
-                  disabled={currentPage >= pageCount}
+                  disabled={+current >= pageCount}
                 >
                   <span className="sr-only">Go to last page</span>
                   <DoubleArrowRightIcon className="h-4 w-4" />
@@ -128,7 +146,7 @@ export function TablePagination({ className, pageCount }: IPaginationProps) {
                 onKeyDown={handleJumpOnKeyDown}
                 ref={jumpInputRef}
                 type="number"
-                className="w-[5rem] border shadow-sm rounded focus:shadow border-input outline-none p-2 text-[1.4rem]"
+                className="w-[5rem] border shadow-sm rounded focus:shadow border-input outline-none p-2 text-[clamp(1.2rem,_1.2vw,_1.4rem)]"
               />
             </aside>
           </>

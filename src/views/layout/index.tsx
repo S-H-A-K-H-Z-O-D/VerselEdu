@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom"
 
 const Layout = () => {
   return (
-    <div>
+    <div className={`text-black bg-bgGreyLight`}>
       <div className="sticky z-50 top-0 bg-white">
         <Navbar />
       </div>

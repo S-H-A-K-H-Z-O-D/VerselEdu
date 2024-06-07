@@ -33,8 +33,8 @@ const Table = () => {
       <div className="bg-white rounded-3xl p-10 max-[450px]:p-5">
         <div className="flex justify-between mb-5 max-lg:flex-col gap-7">
           <div>
-            <h3 className="text-[2.2rem] font-medium">Faollar jadvali</h3>
-            <p className="text-[1.5rem] text-grey64">
+            <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium">Faollar jadvali</h3>
+            <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] text-grey64">
               So’ngi yangilangan vaqt:
               <span className="text-black"> 4/12/2024</span>
             </p>

@@ -10,12 +10,12 @@ const PlanDetail = () => {
             <img className={"w-full object-cover rounded-2xl"} src={item.img} alt="course" />
 
             <div
-              className="absolute bg-opacityDark70 text-[1.3rem] text-white bottom-7
+              className="absolute bg-opacityDark70 text-[clamp(1.2rem,_1.2vw,_1.4rem)] text-white bottom-7
             left-7 rounded-xl rounded-br-2xl px-3 py-2 border border-borderGrey"
             >
               21 daq.
             </div>
-            <div className="absolute text-[1.3rem] text-white top-7 left-7 bg-white rounded-full">
+            <div className="absolute text-[clamp(1.2rem,_1.2vw,_1.4rem)] text-white top-7 left-7 bg-white rounded-full">
               {!item.isPlaying && <CheckIcon />}
               {item.isPlaying && <BlueVideoPlayIcon />}
             </div>
@@ -28,7 +28,7 @@ const PlanDetail = () => {
             )}
           </div>
 
-          <p className="text-[1.6rem] font-medium mt-2 text-start">{item.title}</p>
+          <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] font-medium mt-2 text-start">{item.title}</p>
         </button>
       ))}
     </div>

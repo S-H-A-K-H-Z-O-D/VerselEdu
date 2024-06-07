@@ -252,6 +252,7 @@ export const paymentTypes_data: PaymentType[] = [
   {
     id: 1,
     title: "O’zimizning plastik kartalar orqali to’lov qilish",
+    type: "uzx",
     img: [
       {
         label: "uzkart",
@@ -266,6 +267,7 @@ export const paymentTypes_data: PaymentType[] = [
   {
     id: 2,
     title: "Chet plastik kartalar orqali to’lov qilish",
+    type: "mv",
     img: [
       {
         label: "master-card",
@@ -280,6 +282,7 @@ export const paymentTypes_data: PaymentType[] = [
   {
     id: 3,
     title: "Kursni elektron to’lov orqali amalga oshiring",
+    type: "pcu",
     img: [
       {
         label: "payme",
@@ -295,7 +298,7 @@ export const paymentTypes_data: PaymentType[] = [
       },
     ],
   },
-  { id: 4, title: "Kursni bo’lib to’lash imkoniyati" },
+  { id: 4, type: "budget-account", title: "Kursni bo’lib to’lash imkoniyati" },
 ]
 
 export const payment_history = [
@@ -492,4 +495,62 @@ export const chat = [
     side: "left",
   },
   { id: 2, text: "Assalomu alaykum", side: "right" },
+]
+
+export const privacyPolicy = [
+  {
+    sectionId: "header",
+    label: "Maxfiylik siyosati",
+    body: "Biz – Mohirdev, onlayn kurslar va unga aloqador bo’lgan internet xizmatlarini taqdim etuvchi kompaniyamiz. Xizmatlarimizni taklif etishda https://mohirdev.uz va unga aloqador subdomenlardagi veb saytlardan foydalanamiz. \n Ushbu Maxfiylik siyosati barcha biz taklif qilayotgan onlayn kurslarga taaluqlidir.",
+  },
+  {
+    sectionId: "personal",
+    label: "Shaxsiy ma’lumotlari",
+    heading: "Shaxsiy ma’lumotlari",
+    body: "Biz o’quvchilarining shaxsiy ma’lumotlarini to’plashimiz mumkin. O’quvchilar saytimizdan ro’yxatdan o’tganda va boshqa resurslarimizdan foydalanganda ushbu ma’lumotlarni yig’amiz. O’quvchilar ixtiyoriy ravishda bunday ma’lumotlarni taqdim etgan taqdirdagina shaxsiy ma’lumotlarni yig’amiz.",
+  },
+
+  {
+    sectionId: "additionalData",
+    label: "Qo’shimcha ma’lumotlar",
+    heading: "Qo’shimcha ma’lumotlar",
+    body: "O’quvchilarning foydalanuvchi tajribasini yaxshilash maqsadida qo’shimcha ma’lumotlarni to’plashimiz va saqlashimiz mumkin. Bunday ma’lumotlar avtomatik to’planadi. Bunday ma’lumotlarga qatoriga IP manzili, operatsion tizim, geolokatsiya maʼlumotlari, mahalliy parametrlar, kompyuterlar va mobil qurilmalar bilan bogʻliq identifikatsiya raqamlari, mobil aloqa operatoringiz, tranzaktsiyalar bilan bogʻliq sana va vaqt kabilar kirishi mumkin.",
+  },
+  {
+    sectionId: "collectedData",
+    label: "Yig’ilgan ma’lumotlar",
+    heading: "Yig’ilgan ma’lumotlardan qanday foydalanamiz",
+    body: "Kompaniya o’quvchilarning shaxsiy ma’lumotlarini quyidagi maqsadlarda to’plashi va foydalanishi mumkin: \n Mijozlarga xizmat ko’rsatishni yaxshilash uchun \n Siz taqdim etgan maʼlumotlar mijozlarga xizmat koʻrsatish va qoʻllab-quvvatlash ehtiyojlariga yanada samaraliroq javob berishga yordam beradi. \n SMS xabarlarini yuborish uchun \n Biz o’quvchilarning telefon raqamlariga kurslar yoki xizmatlar haqida SMS xabarnomalar yuborishda foydalanishimiz mumkin. O’quvchilarning telefon raqamlari o’quvchilarning savollari, takliflari va boshqa so’rovlarga javob berishi uchun ham ishlatilishi mumkin. \n Remarketing \n Biz Google Analytics, Yandex Metrica, Facebook Pixel kabi uchunchi tomon xizmatlaridan foydalangan holda «remarketing» (qayta marketing qilish) bilan shug’ullanishimiz mumkin.",
+  },
+  {
+    sectionId: "thirdParty",
+    label: "Uchunchi tomon",
+    heading: "Ma’lumotlar uchunchi tomon bilan ulashilmaydi",
+    body: "Biz foydalanuvchilarning shaxsiy ma’lumotlarini uchunchi tomon bilan bo’lishmaymiz. Barcha ma’lumotlarga faqatgina administratorlarning kirish huquqi mavjud.",
+  },
+  {
+    sectionId: "DeleteData",
+    label: "Ma’lumotlarni o’chirish",
+    heading: "Ma’lumotlarni o’chirish",
+    body: "Foydalanuvchilar saytimizdagi o’z shaxsiy ma’lumotlarini o’chirishni xohlasalar, info@mohirdev.uz orqali bog’lanishlari mumkin.",
+  },
+  {
+    sectionId: "updatingPrivacyPolicy",
+    label: "Yangilanish",
+    heading: "Maxfiylik siyosatini yangilash",
+    body: "Biz ushbu maxfiylik siysoatiga vaqti-vaqti bilan o’zgartirish kiritishimiz mumkin. Kattaroq o’zgarish bo’lganda barcha foydalanuvchilarga sms xabar yoki sayt orqali xabar beriladi.",
+  },
+  {
+    sectionId: "consent",
+    label: "Rozilik bildirish",
+    heading: "Maxfiylik siyosatiga rozilik bildirish",
+    body: "Saytimizga kirishingiz va ro’yxatdan o’tishingiz bilan siz ushbu Maxfiylik siyosatiga rozilik bildirgan hisoblanasiz",
+  },
+  {
+    sectionId: "lastUpdate",
+    label: "Oxirgi yangilanish",
+    date: "24.09.2022",
+    heading: "Oxirgi yangilanish:",
+    body: "Mohirdev istalgan vaqt oldindan ogohlantirmasdan ushbu Maxfiylik siyosatiga o’zgartirish kiritish huquqini o’zida saqlab qoladi.",
+  },
 ]

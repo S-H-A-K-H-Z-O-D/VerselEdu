@@ -8,10 +8,10 @@ const FamousCourses = () => {
     <div className="flex justify-between gap-[4px] mt-[3rem]">
       <div className="w-[75%] bg-white rounded-3xl p-10 mr-10 max-lg:w-full max-lg:mr-0 max-[450px]:p-5">
         <div className="flex items-center justify-between max-[450px]:flex-col ">
-          <h3 className="text-[2.2rem] font-medium max-[450px]:text-[2rem] max-[450px]:my-5">Mashxur kurslar</h3>
+          <h3 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium max-[450px]:my-5">Mashxur kurslar</h3>
           <Link
             to="/courses"
-            className="flex items-center justify-center text-[1.5rem] gap-4 text-deepBlue max-[450px]:text-[1.3rem]"
+            className="flex items-center justify-center text-[clamp(1.4rem,_1.4vw,_1.6rem)] gap-4 text-deepBlue"
           >
             Barchasini ko'rish <ArrowRightIcon />
           </Link>

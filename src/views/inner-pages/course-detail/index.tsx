@@ -21,7 +21,7 @@ const CourseDetail = () => {
           <ArrowLeftIcon />
           <span className="ml-1">Ortga</span>
         </Button>
-        <p className="font-semibold text-[1.8rem] ml-10 max-sm:text-[1.6rem] max-sm:mt-5">
+        <p className="font-semibold text-[clamp(1.5rem,_1.5vw,_1.8rem)] ml-10 max-sm:mt-5">
           2.1 Figma dasturini o'rnatish va dastur interfeysi bilan tanishish
         </p>
       </div>
@@ -34,14 +34,14 @@ const CourseDetail = () => {
 
             {/*Video downloading    //start*/}
             <div className="flex justify-between items-center mt-10 max-sm:flex-col">
-              <div className="flex items-center max-sm:text-[1.5rem]">
+              <div className="flex items-center text-[clamp(1.4rem,_1.4vw,_1.6rem)]">
                 <FileIcon />
                 <span className="ml-1 mr-4 pr-4 border-r-2">Darslik uchun resurslar.pdf</span>
                 <span className="font-medium text-grey64">523</span>
               </div>
 
               <Button className="bg-black hover:bg-opacityDark70 text-white max-sm:w-full max-sm:mt-5">
-                <span className="mr-3 max-sm:text-[1.5rem]">Yuklab olish</span>
+                <span className="mr-3 text-[clamp(1.4rem,_1.4vw,_1.6rem)]">Yuklab olish</span>
                 <DownloadIcon />
               </Button>
             </div>
@@ -61,8 +61,10 @@ const CourseDetail = () => {
             <AccordionItem className="border-none" value={"45"}>
               <AccordionTrigger className="relative data-[state=open]:text-black pb-12 pr-7">
                 <div>
-                  <p>UX/UI kurslari</p>
-                  <p className="absolute bottom-0 text-[1.3rem] text-grey64 pb-2 font-[400]">1 video - 47 videodan</p>
+                  <p className="text-[clamp(1.8rem,_1.8vw,_2.4rem)]">UX/UI kurslari</p>
+                  <p className="absolute bottom-0 text-[clamp(1rem,_1vw,_1.2rem)] text-grey64 pb-2 font-[400]">
+                    1 video - 47 videodan
+                  </p>
                 </div>
               </AccordionTrigger>
               <AccordionContent>

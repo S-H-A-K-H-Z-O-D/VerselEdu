@@ -12,7 +12,7 @@ const Filters = () => {
   return (
     <div className="flex items-center gap-5 max-sm:flex-col">
       <Select>
-        <SelectTrigger className="w-[220px] max-sm:w-full">
+        <SelectTrigger className="w-[220px] max-sm:w-full border-borderGrey">
           <SelectValue placeholder="Haftalik" />
         </SelectTrigger>
         <SelectContent>
@@ -27,7 +27,7 @@ const Filters = () => {
         </SelectContent>
       </Select>
       <Select>
-        <SelectTrigger className="w-[350px] max-sm:w-full">
+        <SelectTrigger className="w-[350px] max-sm:w-full border-borderGrey">
           <SelectValue placeholder="Sotib olingan kurslar mavjud emas" />
         </SelectTrigger>
         <SelectContent>

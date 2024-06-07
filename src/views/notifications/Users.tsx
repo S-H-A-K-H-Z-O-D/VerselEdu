@@ -15,14 +15,14 @@ const Users = () => {
       className={`max-md:pb-0 md:min-w-[clamp(280px,_30vw,_450px)] md:w-[clamp(280px,_30vw,_450px)]
         flex flex-col w-full md:gap-0 overflow-auto custom-scrollbar md:border-r-2 h-full ${isUser && "max-md:hidden"}`}
     >
-      <div className="sticky top-0 border-b-2 bg-white rounded-tl-[clamp(1.6rem,_1.6vw,_2.4rem)] max-md:rounded-tr-[clamp(1.6rem,_1.6vw,_2.4rem)]">
+      <div className="sticky top-0 border-b-2 border-borderGrey bg-white rounded-tl-[clamp(1.6rem,_1.6vw,_2.4rem)] max-md:rounded-tr-[clamp(1.6rem,_1.6vw,_2.4rem)]">
         <div className="relative m-[clamp(0.8rem,_0.8vw,_1.4rem)]">
-          <div className="absolute top-5 right-3">
+          <div className="absolute top-5 right-3 [&_svg_path]:stroke-greyTxt">
             <SearchIcon />
           </div>
           <input
             type="text"
-            className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] p-4 w-full focus:outline-none max-md:w-full"
+            className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] p-4 w-full bg-white focus:outline-none max-md:w-full"
             placeholder="Qidiruv..."
           />
         </div>
@@ -37,8 +37,8 @@ const Users = () => {
           >
             <img src={item.img} width={50} height={50} alt="user profile picture" className="rounded-full" />
             <div className="flex flex-col w-full">
-              <div className="flex items-center justify-between text-[1.2rem] max-sm:text-[1rem]">
-                <p className="font-semibold text-[clamp(1.6rem,_1.6vw,_1.8rem)]">{item.name}</p>
+              <div className="flex items-center justify-between text-[clamp(1rem,_1vw,_1.2rem)]">
+                <p className="font-semibold text-[clamp(1.5rem,_1.5vw,_1.8rem)]">{item.name}</p>
                 <p className="font-light text-grey64 text-[clamp(1.2rem,_1.2vw,_1.4rem)]">{item.time}</p>
               </div>
               <div className="flex justify-between gap-2">

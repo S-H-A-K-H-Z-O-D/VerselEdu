@@ -29,7 +29,7 @@ const DangerZone = () => {
 
   return (
     <div className="max-w-6xl mx-auto mt-12 border-t pt-10 max-xl:px-5">
-      <p className="font-medium mb-3 text-[clamp(1.6rem,_1.6vw,_1.8rem)]">Xafli hudud</p>
+      <p className="font-medium mb-3 text-[clamp(1.5rem,_1.5vw,_1.8rem)]">Xafli hudud</p>
       <Dialog open={isOpen} onOpenChange={() => setIsOpen(false)}>
         <DialogContent className="min-w-[25%] rounded-3xl">{renderModalContent()}</DialogContent>
       </Dialog>

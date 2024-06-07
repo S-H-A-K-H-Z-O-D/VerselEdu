@@ -10,7 +10,7 @@ const AnswerAccordion = ({ data }: any) => {
     <Accordion type="single" collapsible className="space-y-3">
       <AccordionItem className="border-none" value={"45"}>
         <AccordionTrigger className="relative data-[state=open]:text-black pb-5 pr-7 flex justify-start gap-5 comments">
-          <p className="text-[1.5rem] text-deepBlue">(1) Javoblar</p>
+          <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] text-deepBlue">(1) Javoblar</p>
         </AccordionTrigger>
         <AccordionContent className="space-y-5">
           {/* eslint-disable-next-line react/prop-types */}
@@ -18,12 +18,12 @@ const AnswerAccordion = ({ data }: any) => {
             <div key={index} className="flex items-start gap-6">
               <img src={item.img} width={40} height={40} alt="user profile picture" className="rounded-full" />
               <div>
-                <div className="flex items-center text-[1.2rem]">
+                <div className="flex items-center text-[clamp(1rem,_1vw,_1.2rem)]">
                   <p className="font-medium">{item.admin}</p>
                   <p className="font-light text-grey64 border-l-2 ml-4 pl-4">{item.time}</p>
                   <p className="font-light text-grey64 border-l-2 ml-4 pl-4">{item.day}</p>
                 </div>
-                <p className="text-[1.5rem]">{item.comment}</p>
+                <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)]">{item.comment}</p>
               </div>
             </div>
           ))}
@@ -55,8 +55,8 @@ const Comments = () => {
   return (
     <section className="bg-white rounded-3xl p-10 mt-10 max-sm:p-5">
       <div className="flex justify-between items-center mb-10">
-        <h5 className="text-[2.2rem] font-medium">Savol va javoblar</h5>
-        <p className="text-[1.5rem] text-grey64">32 ta savollar</p>
+        <h5 className="text-[clamp(1.8rem,_1.8vw,_2.4rem)] font-medium">Savol va javoblar</h5>
+        <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] text-grey64">32 ta savollar</p>
       </div>
 
       {/*  Inputting Question     //start*/}
@@ -66,20 +66,21 @@ const Comments = () => {
           <input
             onChange={(e) => (formData.comment = e.target.value)}
             type="text"
+            placeholder="savolni kiritng..."
             required={true}
             className="
-          w-full border-b focus:outline-none py-3"
+          w-full border-b border-borderGrey focus:outline-none py-3 bg-white"
           />
           <div className="flex justify-end mt-5">
             <Button
               variant="ghost"
-              className="max-sm:px-4 max-sm:h-[40px] max-sm:rounded-xl text-[1.5rem] max-sm:text-[1.3rem]"
+              className="max-sm:px-4 max-sm:h-[40px] max-sm:rounded-xl text-[clamp(1.4rem,_1.4vw,_1.6rem)]"
             >
               Bekor qilish
             </Button>
             <Button
               type={"submit"}
-              className="max-sm:px-4 max-sm:h-[40px] max-sm:rounded-xl text-[1.5rem] max-sm:text-[1.3rem]"
+              className="max-sm:px-4 max-sm:h-[40px] max-sm:rounded-xl text-[clamp(1.4rem,_1.4vw,_1.6rem)]"
             >
               Jo'natish
             </Button>
@@ -94,12 +95,12 @@ const Comments = () => {
           <div key={index} className="flex items-start gap-6">
             <img src={item.img} width={50} height={50} alt="user profile picture" className="rounded-full" />
             <div>
-              <div className="flex items-center text-[1.2rem] max-sm:text-[1rem]">
+              <div className="flex items-center text-[clamp(1rem,_1vw,_1.2rem)]">
                 <p className="font-medium">{item.name}</p>
                 <p className="font-light text-grey64 border-l-2 ml-4 pl-4">{item.time}</p>
                 <p className="font-light text-grey64 border-l-2 ml-4 pl-4">{item.day}</p>
               </div>
-              <p className="text-[1.5rem] max-sm:text-[1.3rem]">{item.comment}</p>
+              <p className="text-[clamp(1.4rem,_1.4vw,_1.6rem)]">{item.comment}</p>
 
               {/* Replied comment*/}
               {item.reply && <AnswerAccordion data={item.reply} />}

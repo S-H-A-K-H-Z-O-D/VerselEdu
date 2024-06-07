@@ -39,23 +39,23 @@ const ChatInput = ({ setChatData }: any) => {
 
   return (
     <>
-      <div className=" border-t-2 bg-white rounded-br-[clamp(1.6rem,_1.6vw,_2.4rem)] max-md:rounded-bl-[clamp(1.6rem,_1.6vw,_2.4rem)]">
+      <div className=" border-t-2 border-borderGrey bg-white rounded-br-[clamp(1.6rem,_1.6vw,_2.4rem)] max-md:rounded-bl-[clamp(1.6rem,_1.6vw,_2.4rem)]">
         <form className="relative" onSubmit={onSubmit}>
           <input
             type="text"
-            className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] py-[clamp(1.2rem,_1.2vw,_1.4rem)] px-[clamp(1.5rem,_1.5vw,_1.8rem)] w-full
+            className="text-[clamp(1.4rem,_1.4vw,_1.6rem)] bg-white py-[clamp(1.2rem,_1.2vw,_1.4rem)] px-[clamp(1.5rem,_1.5vw,_1.8rem)] w-full
                focus:outline-none max-md:w-full rounded-br-[clamp(1.6rem,_1.6vw,_2.4rem)] max-md:rounded-bl-[clamp(1.6rem,_1.6vw,_2.4rem)]"
             placeholder="Xabaringizni yozing..."
             onChange={(e) => setChatText(e.target.value)}
             value={chatText}
           />
 
-          <button className="absolute right-28 top-5" onClick={clickFileInput} type="button">
+          <button className="absolute right-28 top-5 [&_svg_path]:fill-greyTxt" onClick={clickFileInput} type="button">
             <input ref={imgRef} type="file" onChange={onLoad} className="hidden" />
             <AttachFileIcon />
           </button>
 
-          <button type="submit" className="absolute right-10 top-5">
+          <button type="submit" className="absolute right-10 top-5 [&_svg_path]:stroke-greyTxt">
             <SentFileIcon />
           </button>
         </form>
