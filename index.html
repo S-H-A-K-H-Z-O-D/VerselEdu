@@ -7,6 +7,26 @@
     <title>Gudge</title>
   </head>
   <body>
+  <script type="text/javascript">
+    // Define the correct password
+    const correctPassword = "gudgepass";
+
+    // Function to prompt for password and check it
+    function checkPassword() {
+      // Prompt user for password
+      let password = prompt("Parolni kiriting:");
+
+      // Check if the password is correct
+      if (password !== correctPassword) {
+        // Alert the user and reload the page if the password is incorrect
+        alert("Incorrect password. Access denied.");
+        location.reload(); // Reload the page to prompt again
+      }
+    }
+
+    // Call the function to check the password when the page loads
+    checkPassword();
+  </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
